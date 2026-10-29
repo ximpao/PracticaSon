@@ -1,7 +1,12 @@
 package uvm;
 
+import javax.swing.SwingUtilities;
+
 public class Main {
     public static void main(String[] args) {
-       new VentanaMatrizHilos().setVisible(true);
+        SwingUtilities.invokeLater(() -> {
+            VentanaMatrizHilos ventana = new VentanaMatrizHilos();
+            ventana.setVisible(true);
+        });
     }
 }
